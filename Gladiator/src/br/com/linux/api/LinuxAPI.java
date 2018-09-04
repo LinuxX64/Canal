@@ -20,7 +20,6 @@ import net.minecraft.server.v1_7_R4.ChatSerializer;
 
 public class LinuxAPI {
 
-	private static int VERSION = 47;
 
 	public static void Effect(Player p, PotionEffectType PotionEffectTy, int booster, int time) {
 		p.addPotionEffect(new PotionEffect(PotionEffectTy, time * 20, booster - 1));
@@ -152,7 +151,7 @@ public class LinuxAPI {
 	}
 
 	public static void sendTitle(Player p, String title) {
-		if (((CraftPlayer) p).getHandle().playerConnection.networkManager.getVersion() < VERSION) {
+		if (((CraftPlayer) p).getHandle().playerConnection.networkManager.getVersion() < 47) {
 			return;
 		}
 		((CraftPlayer) p).getHandle().playerConnection.sendPacket(new ProtocolInjector.PacketTitle(
@@ -160,7 +159,7 @@ public class LinuxAPI {
 	}
 
 	public static void sendSubTitle(Player p, String subtitle) {
-		if (((CraftPlayer) p).getHandle().playerConnection.networkManager.getVersion() < VERSION) {
+		if (((CraftPlayer) p).getHandle().playerConnection.networkManager.getVersion() < 47) {
 			return;
 		}
 		((CraftPlayer) p).getHandle().playerConnection.sendPacket(new ProtocolInjector.PacketTitle(
