@@ -3,5 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="Gladiator/src"/>
 	<classpathentry kind="lib" path="C:/Users/USUARIO/Desktop/HastyMC/LocalHost/LOGIN/spigot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USUARIO/Desktop/HastyMC/LocalHost/HGA1/plugins/WorldEdit.jar"/>
 	<classpathentry kind="output" path="Gladiator/bin"/>
 </classpath>

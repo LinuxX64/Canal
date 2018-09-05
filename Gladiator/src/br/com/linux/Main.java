@@ -1,6 +1,7 @@
 package br.com.linux;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
@@ -22,10 +23,11 @@ import br.com.linux.api.LinuxAPI;
 public class Main extends JavaPlugin {
 
 	public static Plugin plugin;
-	public static Plugin instance;
 	public static ArrayList<UUID> jogadores = new ArrayList<>();
 	public static ArrayList<String> admins = new ArrayList<>();
 	public static ArrayList<String> Checando = new ArrayList<>();
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static HashMap<String, Object> saveConfiguration = new HashMap();
 
 	public static String semp = "§c§lPERMISSÃO §fVocê não possui permissão para executar este comando.";
 
@@ -33,21 +35,13 @@ public class Main extends JavaPlugin {
 		return plugin;
 	}
 
-	public static Plugin getInstance() {
-		return instance;
-	}
-
 	@Override
 	public void onEnable() {
 		saveDefaultConfig();
 		plugin = this;
-		instance = this;
 		Bukkit.getConsoleSender().sendMessage("                                  ");
-		Bukkit.getConsoleSender().sendMessage("§fPlugin funcionando normalmente!");
-		Bukkit.getConsoleSender().sendMessage("§fQuaisquer tipo de bug, provavelmente conflito");
-		Bukkit.getConsoleSender().sendMessage("§fMe contate no discord: LinuxX32#9825");
-		Bukkit.getConsoleSender().sendMessage("§fMe siga no twitter: @LinuxX32");
-		Bukkit.getConsoleSender().sendMessage("§fAproveite o plugin, rs.");
+		Bukkit.getConsoleSender().sendMessage("§fPlugin funcionando normal");
+		Bukkit.getConsoleSender().sendMessage("§fQualquer tipo de bug me chama na dm: §e@vsfLinux");
 		Bukkit.getConsoleSender().sendMessage("                                  ");
 
 		eventos();
